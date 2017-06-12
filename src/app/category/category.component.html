@@ -1,3 +1,6 @@
 <div *ngFor="let category of categories">
-  <span>{{category.title}}</span><br>
+  <span (click)="toggleDisplay">{{category.title}}</span><br>
+  <div *ngFor="let post of category.posts">
+    <span>{{post.title}}</span>
+  </div>
 </div>
