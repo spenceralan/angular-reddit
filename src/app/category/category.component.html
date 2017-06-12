@@ -1,4 +1,4 @@
-<div *ngFor="let category of categories">
+<div *ngFor="let category of categories | async">
   <span class="title"(click)="toggleDisplay(category)">{{category.title}}</span><br>
   <div *ngIf="category.display">
     <div class="posts" *ngFor="let post of category.posts">

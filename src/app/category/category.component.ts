@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from './category.model';
 import { Post } from '../post/post.model';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  styleUrls: ['./category.component.css'],
+  providers: [CategoryService],
 })
 export class CategoryComponent implements OnInit {
 
-  categories: Category[];
+  categories = this.categoryService.getCategories();
 
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
   }
 
-  save(category: Category) {
-    this.categories.push(category)
-  }
+
 
   toggleDisplay(category) {
     if (category.display === true) {
