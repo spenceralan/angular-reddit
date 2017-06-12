@@ -1,6 +1,7 @@
 <div *ngFor="let category of categories | async">
   <span class="title"(click)="toggleDisplay(category)">{{category.title}}</span><br>
   <div *ngIf="category.display">
+    <a (click)="addPostPage(category)" class="btn btn-default">Add Post</a>
     <div class="posts" *ngFor="let post of category.posts">
       <div class="post">
         <span (click)="togglePostDisplay(post)">{{post.title}}</span>

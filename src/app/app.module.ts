@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { NewCategoryComponent } from './new-category/new-category.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,6 +28,7 @@ export const firebaseConfig = {
     CategoryComponent,
     PostComponent,
     NewCategoryComponent,
+    NewPostComponent,
   ],
   imports: [
     BrowserModule,
