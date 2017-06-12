@@ -9,17 +9,15 @@ import { Post } from '../post/post.model';
 })
 export class CategoryComponent implements OnInit {
 
-  categories: Category[] = [
-    new Category("Category 1", [new Post("Fancy Post", "This is a fancy post.", "fancyuser")]),
-    new Category("Category 2", [new Post("Fancy Post", "This is a fancy post.", "fancyuser")]),
-    new Category("Category 3", [new Post("Fancy Post", "This is a fancy post.", "fancyuser")]),
-    new Category("Category 4", [new Post("Fancy Post", "This is a fancy post.", "fancyuser")]),
-  ];
-  display: boolean = false;
+  categories: Category[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  save(category: Category) {
+    this.categories.push(category)
   }
 
   toggleDisplay(category) {
@@ -27,6 +25,14 @@ export class CategoryComponent implements OnInit {
       category.display = false;
     } else {
       category.display = true;
+    }
+  }
+
+  togglePostDisplay(post) {
+    if (post.display === true) {
+      post.display = false;
+    } else {
+      post.display = true;
     }
   }
 

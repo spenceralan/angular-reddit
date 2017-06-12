@@ -1,0 +1,15 @@
+.title {
+  cursor: pointer;
+}
+.posts {
+  margin-left: 1em;
+  padding-left: 0.5em;
+  border-left: solid 1px #333;
+}
+.post {
+  cursor: pointer;
+}
+.post-content {
+  margin-left: 1em;
+  padding-left: 0.5em;
+}
