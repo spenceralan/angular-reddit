@@ -22,5 +22,12 @@ export class CategoryComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleDisplay(category) {
+    if (category.display === true) {
+      category.display = false;
+    } else {
+      category.display = true;
+    }
+  }
 
 }
